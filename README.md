@@ -22,7 +22,7 @@ npm install -g pnpm
 ### 2. Clone the repo and run (just 1 commands):
 
 ```bash
-git clone https://github.com/0x_mcp/shelby-study-app.git && cd shelby-study-app && pnpm install && pnpm dev
+git clone https://github.com/manhcuongsev/shelby-study-app.git && cd shelby-study-app && pnpm install && pnpm dev
 ```
 
 ### 3. Open in your browser:
