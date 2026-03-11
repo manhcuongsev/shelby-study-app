@@ -1,21 +1,70 @@
 # Shelby Study App
 
-A simple application for storing study files on Shelby (Aptos blockchain).
+A simple decentralized application for uploading and sharing study files (PDFs, images, notes, slides, etc.) using **Shelby** on the **Aptos** blockchain.
 
-## Setup
-1. `pnpm install`
-2. `pnpm dev` (run at http://localhost:3000)
+## Quick Start (for users / contributors)
 
-## Features
-- Upload files to Shelby.
+### 1. Install Node.js + pnpm (do this once):
 
-- Receive sharing links (expires if configured).
+- Download and install **Node.js LTS** (version 18 or 20 recommended) from:  
+  https://nodejs.org
 
-## TODO
-- Add a file list page.
+- Open your terminal:
+  - Windows: Command Prompt or PowerShell
+  - macOS/Linux: Terminal
 
-- Save metadata on-chain.
+Install **pnpm** globally (package manager faster than npm):
 
-- Preview files (PDF, image).
+```bash
+npm install -g pnpm
+```
 
-Built with Next.js, Aptos Wallet Adapter, Shelby SDK.
+### 2. Clone the repo and run (just 4 commands):
+
+```bash
+git clone https://github.com/0x_mcp/shelby-study-app.git && cd shelby-study-app && pnpm install && pnpm dev
+```
+
+### 3. Open in your browser:
+Visit:
+http://localhost:3000
+- On the home page → click Connect Wallet (choose Petra wallet) and connect your Aptos wallet.
+- Click Upload File → to go to the upload page.
+- Select a small file (e.g. PDF, JPG, PNG < 5MB for testing) → click Upload lên Shelby.
+
+## Important note:
+Shelby is currently in Early Access (testnet phase). If you see upload errors (e.g. "access denied", network issues, or transaction failure), you need to request access first:
+- Visit: https://shelby.xyz  
+- Or check docs: https://docs.shelby.xyz  
+- Join their Discord (link usually on the site) to get approved quickly.
+
+If you get "localhost refused to connect" or port 3000 is busyRun the dev server on a different port:
+
+```bash 
+pnpm dev -- -p 4000
+```
+Then open: http://localhost:4000
+
+## Features (current version)
+- Connect Aptos wallet (Petra supported)
+- Upload files directly from browser to Shelby
+- Display upload result (blob ID / URL – check console or UI)
+
+## Tech Stack
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Aptos Wallet Adapter + Petra Wallet
+- Shelby SDK (React hooks for upload)
+
+## Next Steps / TODO
+- Add file list / preview page
+- Save metadata on-chain (Aptos Move)
+- Add expiration for shared links
+- Better error handling & loading states
+- Deploy to Vercel for public demo
+
+Feel free to fork, contribute, or use this as a starter template!
+
+Questions? DM me on X: @0x_mcp
+
+Happy building! 
