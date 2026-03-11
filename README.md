@@ -19,7 +19,7 @@ Install **pnpm** globally (package manager faster than npm):
 npm install -g pnpm
 ```
 
-### 2. Clone the repo and run (just 4 commands):
+### 2. Clone the repo and run (just 1 commands):
 
 ```bash
 git clone https://github.com/0x_mcp/shelby-study-app.git && cd shelby-study-app && pnpm install && pnpm dev
